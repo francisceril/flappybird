@@ -43,7 +43,6 @@ if __name__ == '__main__':
     )
     game_images['background'] = pygame.image.load(background).convert()
     game_images['player'] = pygame.image.load(player).convert_alpha()
-    game_images['player2'] = pygame.image.load(player2).convert_alpha()
     game_images['gameover'] = pygame.image.load(gameover).convert_alpha()
 
     #Game Sounds
@@ -72,7 +71,6 @@ def welcomeScreen():
                 screen.blit(game_images['background'],(0,0))    
                 screen.blit(game_images['message'],(message_x,message_y))
                 screen.blit(game_images['player'],(player_x,player_y))
-                screen.blit(game_images['player2'],(player2_x,player2_y))
                 screen.blit(game_images['base'],(base_x,ground_y))
                 pygame.display.update()
                 fps_clock.tick(fps)
@@ -82,8 +80,6 @@ def mainGame():
     score = 0
     player_x = int(screen_width/8)
     player_y = int(screen_height/1.9)
-    player2_x = int(screen_width/7)
-    player2_y = int(screen_height/1.5)
     base_x = 0
 
     newPipe1 = getRandomPipe()
